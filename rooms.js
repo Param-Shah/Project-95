@@ -3,6 +3,7 @@
 var firebaseConfig = {
     apiKey: "AIzaSyCmzHUbVcipLP4fT6OfYFkkg1UB0O9ZZ_g",
     authDomain: "letschat-917b0.firebaseapp.com",
+    databaseURL: "https://letschat-917b0-default-rtdb.firebaseio.com",
     projectId: "letschat-917b0",
     storageBucket: "letschat-917b0.appspot.com",
     messagingSenderId: "516378242401",
@@ -11,9 +12,7 @@ var firebaseConfig = {
   };
   
   // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-
+  firebase.initializeApp(firebaseConfig);
 
   function setname() {
     document.getElementById("name_display").innerHTML = localStorage.getItem("name")
